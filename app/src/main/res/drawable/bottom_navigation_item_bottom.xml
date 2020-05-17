@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 無効状態 -->
+    <item android:state_enabled="false" android:color="@android:color/secondary_text_light"/>
+    <!-- 有効状態 -->
+    <item android:state_enabled="true" android:color="#FFFFFF"/>
+    <!-- チェック状態 -->
+    <item android:color="?colorAccent" android:state_checked="true"/>
+    <!-- タップしたとき -->
+    <item android:color="?colorPrimaryDark" android:state_pressed="true"/>
+    <!-- 通常 -->
+    <item android:color="#FFFFFF"/>
+</selector>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SecondActivity"
+    tools:showIn="@layout/activity_second">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_s"
+            android:text="１. チェック場所の記録"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_arrow_right"
+            android:drawablePadding="@dimen/margin_0"
+            android:drawableTint="@color/colorPale"
+            android:padding="@dimen/margin_s"
+            android:text="２. 記録完了"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/items_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <jp.yuriwolflotslove.MY_CHECK_MATE.NonScrollListView
+                    android:id="@+id/editListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="1dp"
+                    android:entries="@array/sample_list"/>
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-96dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_s"
+                    android:text="「 ひとことメモ 」 ※４行以内" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/border">
+
+                    <EditText
+                        android:id="@+id/edit_memo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:contentDescription="ひとことメモを記入することができます。"
+                        android:freezesText="true"
+                        android:hint=" 例：手紙の投函。帰りに買い出し。"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:lines="4"
+                        android:maxLines="4"
+
+                        android:text="@string/memo_null"
+                        android:textCursorDrawable="@color/colorAccent"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:theme="@style/EditTextColorControl" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:background="@drawable/bg_white_bottom"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/btn_setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/red_border_selector"
+                            android:drawableStart="@drawable/ic_finish"
+                            android:drawablePadding="0dp"
+                            android:drawableTint="@color/white"
+                            android:elevation="16dp"
+                            android:letterSpacing="0.1"
+                            android:paddingStart="64dp"
+                            android:paddingTop="32dp"
+                            android:paddingEnd="32dp"
+                            android:paddingBottom="32dp"
+                            android:text="以上を記録する"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

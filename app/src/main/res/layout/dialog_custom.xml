@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_dialog_main"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:text="Title"
+            android:textColor="@color/darkblue"
+            android:textSize="12sp" />
+
+        <jp.yuriwolflotslove.MY_CHECK_MATE.RoundClipFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:elevation="2dp"
+            app:cornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/dialog_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/border" />
+        </jp.yuriwolflotslove.MY_CHECK_MATE.RoundClipFrameLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bt_dialog_close"
+        android:elevation="4dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="×"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-48dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="2dp"
+        android:gravity="right|bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/positive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_dialog_close"
+            android:drawableStart="@drawable/ic_arrow_left"
+            android:drawableTint="@color/white"
+            android:elevation="2dp"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="16dp"
+            android:text="一 覧 に 戻 る"
+            android:textColor="@color/darkblue"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:elevation="2dp" />
+    </LinearLayout>
+
+</RelativeLayout>

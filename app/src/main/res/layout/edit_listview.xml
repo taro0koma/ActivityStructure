@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--    android:descendantFocusability="blocksDescendants"-->
+    <!--    android:clickable="false"-->
+    <!--    android:focusable="false"-->
+    <!--    android:focusableInTouchMode="false">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/entry_list"
+        android:elevation="6dp"
+        android:fadingEdge="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/entry_list_cover"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_key"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/icon_key"
+            android:elevation="4dp"
+            android:src="@drawable/ic_key"
+            android:tint="@color/colorPale0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="false"
+            android:elevation="4dp"
+            android:freezesText="true"
+            android:textIsSelectable="false"
+            android:hint="チェック場所１"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/EditTextColorControl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/wrap_button1"
+            app:layout_constraintStart_toEndOf="@id/image_key"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <jp.yuriwolflotslove.MY_CHECK_MATE.RoundClipFrameLayout
+            android:id="@+id/wrap_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/camera_merge"
+            android:elevation="5dp"
+            app:cornerRadius="23dp"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/button1"
+                android:layout_width="64dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:scaleType="centerCrop"
+                android:contentDescription="カメラで撮影をする"/>
+
+        </jp.yuriwolflotslove.MY_CHECK_MATE.RoundClipFrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

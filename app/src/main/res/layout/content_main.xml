@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:id="@+id/main_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="96dp"
+        android:elevation="2dp"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/main_items_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/status_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="チェック記録は未作成です。" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_content_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="28dp"
+                        android:background="@drawable/entry_list"
+                        android:elevation="10dp"
+                        android:fadingEdge="vertical"
+                        android:orientation="vertical"
+                        android:padding="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card_content"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="28dp"
+                        android:background="@drawable/card_cover"
+                        android:elevation="18dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/image_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:elevation="19dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/text_secondary_wrapper"
+                        app:layout_constraintEnd_toStartOf="@id/text_secondary_wrapper"
+                        app:layout_constraintStart_toStartOf="@id/card_content"
+                        app:layout_constraintTop_toTopOf="@id/text_secondary_wrapper">
+
+                        <ImageView
+                            android:id="@+id/icon_finished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_finish"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/text_primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="32dp"
+                        android:elevation="18.1dp"
+                        android:letterSpacing="0.1"
+                        android:text="0000年00月00日(０)"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/text_secondary_wrapper"
+                        app:layout_constraintTop_toTopOf="@id/card_content" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text_secondary_wrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="19dp"
+                        app:layout_constraintEnd_toEndOf="@id/card_content"
+                        app:layout_constraintStart_toEndOf="@id/image_icon"
+                        app:layout_constraintTop_toBottomOf="@id/text_primary">
+
+
+                        <TextView
+                            android:id="@+id/text_secondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elevation="1dp"
+                            android:letterSpacing="0.05"
+                            android:maxLines="1"
+                            android:text="00:00"
+                            android:textColor="@android:color/white"
+                            android:textSize="48sp"
+                            app:autoSizeMaxTextSize="50dp"
+                            app:autoSizeMinTextSize="1dp"
+                            app:autoSizeTextType="uniform"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_secondary_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="に記録完了"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@id/text_secondary"
+                            app:layout_constraintStart_toEndOf="@id/text_secondary"
+                            app:layout_constraintTop_toTopOf="@id/text_secondary" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_memo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:elevation="19dp"
+                        android:gravity="top|center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@id/text_secondary_wrapper"
+                        app:layout_constraintTop_toBottomOf="@id/text_secondary_wrapper">
+
+                        <ImageView
+                            android:id="@+id/icon_memospace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/ic_chat"/>
+
+                        <TextView
+                            android:id="@+id/text_memo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="未設定"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/entry_list"
+                        android:breakStrategy="simple"
+                        android:elevation="18.4dp"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="9dp"
+                        android:text="玄関／ガスの元栓／窓１／窓２／玄関／ガスの元栓／窓１／窓２"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/card_content"
+                        app:layout_constraintEnd_toEndOf="@id/card_content"
+                        app:layout_constraintStart_toStartOf="@id/card_content"
+                        app:layout_constraintTop_toBottomOf="@id/layout_memo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginEnd="40dp"
+                    android:breakStrategy="simple"
+                    android:drawableStart="@drawable/ic_attention"
+                    android:drawablePadding="24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:gravity="center_vertical"
+                    android:lineHeight="19sp"
+                    android:text="@string/splash_text"
+                    android:textSize="12sp" />
+
+
+                <jp.yuriwolflotslove.MY_CHECK_MATE.NonScrollListView
+                    android:id="@+id/mainListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@android:color/transparent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="1dp"
+                    android:elevation="3dp"
+                    android:entries="@array/sample_list" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/copyright" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/main_bg" />
+
+</RelativeLayout>

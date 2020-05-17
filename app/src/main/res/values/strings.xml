@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MY CHECK MATE</string>
+    <string name="logo">@string/app_name</string>
+    <string name="action_settings">Settings</string>
+    <string name="sub">NEXT</string>
+    <string name="return_sub">RETURN</string>
+    <string name="title_activity_second">MyCheckMate</string>
+    <string name="description">pictures</string>
+    <string name="icon_key">check point</string>
+    <string name="text_null">""</string>
+    <string name="memo_null">""</string>
+    <string name="splash_image">MY CHECK MATE</string>
+    <string name="splash_text">鍵の施錠や安全装置の情報は、重大なセキュリティ情報です。このアプリで記録場所の確認を行われる際は、周囲の目に触れない場所で行うことを推奨いたします。</string>
+    <string name="copyright">©MY CHECK MATE</string>
+    <string-array name="sample_list">
+        <item>ONE</item>
+        <item>TWO</item>
+        <item>THREE</item>
+        <item>FOUR</item>
+        <item>FIVE</item>
+    </string-array>
+</resources>

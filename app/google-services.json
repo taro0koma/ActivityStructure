@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "21045370739",
+    "firebase_url": "https://my-check-mate.firebaseio.com",
+    "project_id": "my-check-mate",
+    "storage_bucket": "my-check-mate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21045370739:android:beb0d939ad10ae3a94ef06",
+        "android_client_info": {
+          "package_name": "jp.yuriwolflotslove.MY_CHECK_MATE"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21045370739-50u4l8m8ql3lad4uat77995ra15anlf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlYqPmfL9hzvWOpYFITVy0I2p8ZS7Pj2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21045370739-50u4l8m8ql3lad4uat77995ra15anlf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
